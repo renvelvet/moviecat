@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Movie Cat</string>
+    <string name="title_activity_detail_show">DetailShowActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Movies</string>
+    <string name="second_fragment_label">TV Shows</string>
+    <string name="title_activity_detail_movie">DetailMovieActivity</string>
+
+    <string name="title">Title</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="cast">STARRING</string>
+    <string name="genre">GENRE</string>
+    <string name="share_text">Seen "%s" on MovieCat yet?</string>
+
+</resources>
