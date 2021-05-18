@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.home
 
 import android.content.Context
 import androidx.annotation.StringRes
@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.dicoding.moviecat.R
+import com.dicoding.moviecat.ui.movie.MovieFragment
+import com.dicoding.moviecat.ui.show.ShowFragment
 
 class SectionsPagerAdapter(private val context: Context, fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 

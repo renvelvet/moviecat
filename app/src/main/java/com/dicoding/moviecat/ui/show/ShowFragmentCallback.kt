@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.show
 
 import com.dicoding.moviecat.data.ShowEntity
 

@@ -21,25 +21,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.DetailMovieActivity"
+            android:name=".ui.detail.DetailMovieActivity"
             android:label="@string/title_activity_detail_movie"
-            android:parentActivityName=".ui.MainActivity"
+            android:parentActivityName=".ui.home.MainActivity"
             android:theme="@style/Theme.MovieCat.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.MainActivity" />
+                android:value=".ui.home.MainActivity" />
         </activity>
 
         <activity
-            android:name=".ui.DetailShowActivity"
+            android:name=".ui.detail.DetailShowActivity"
             android:label="@string/title_activity_detail_show"
-            android:parentActivityName=".ui.MainActivity"
+            android:parentActivityName=".ui.home.MainActivity"
             android:theme="@style/Theme.MovieCat.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.MainActivity" />
+                android:value=".ui.home.MainActivity" />
         </activity>
-        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.home.MainActivity" />
     </application>
 
 </manifest>

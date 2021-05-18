@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.movie
 
 import android.os.Bundle
 import android.view.LayoutInflater

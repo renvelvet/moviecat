@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.movie
 
 import com.dicoding.moviecat.data.MovieEntity
 

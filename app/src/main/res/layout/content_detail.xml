@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_detail"
     android:layout_width="match_parent"
-    android:layout_marginBottom="32dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="32dp">
 
     <com.flaviofaria.kenburnsview.KenBurnsView
         android:id="@+id/cover_image"
@@ -114,8 +114,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_head_description"
                     android:fontFamily="@font/lato"
-                    android:textColor="@color/white"
                     android:lineSpacingExtra="1.5sp"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     tools:text="Description" />
             </RelativeLayout>
@@ -129,9 +129,9 @@
                     android:id="@+id/tv_head_cast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/koho"
                     android:text="@string/cast"
-                    android:layout_marginTop="8dp"
                     android:textColor="@color/blue_secondary"
                     android:textSize="18sp"
                     android:textStyle="bold" />

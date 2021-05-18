@@ -1,14 +1,14 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.moviecat.R
 import com.dicoding.moviecat.data.ShowEntity
 import com.dicoding.moviecat.databinding.ActivityDetailShowBinding
 import com.dicoding.moviecat.databinding.ContentDetailBinding
-import com.dicoding.moviecat.utils.DataDummy
 
 class DetailShowActivity : AppCompatActivity() {
 
@@ -26,18 +26,16 @@ class DetailShowActivity : AppCompatActivity() {
         contentBinding = binding.contentDetail
         setContentView(binding.root)
 
-        binding.toolbar.setTitle("")
+        binding.toolbar.title = ""
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailShowViewModel::class.java]
         val extras = intent.extras
         if (extras != null) {
             val id = extras.getInt(EXTRA_ID)
-            for (show in DataDummy.generateDummyShows()) {
-                if (show.showId == id) {
-                    populateShow(show)
-                }
-            }
+            viewModel.setSelectedShow(id)
+            populateShow(viewModel.getShow())
         }
     }
 

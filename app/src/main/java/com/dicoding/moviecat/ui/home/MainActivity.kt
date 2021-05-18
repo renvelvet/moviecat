@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

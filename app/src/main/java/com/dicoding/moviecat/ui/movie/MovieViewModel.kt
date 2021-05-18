@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.movie
 
 import androidx.lifecycle.ViewModel
 import com.dicoding.moviecat.data.MovieEntity

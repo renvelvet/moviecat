@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.show
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.dicoding.moviecat.R
 import com.dicoding.moviecat.data.ShowEntity
 import com.dicoding.moviecat.databinding.RvItemsBinding
+import com.dicoding.moviecat.ui.detail.DetailShowActivity
 
 class ShowAdapter(private val callback: ShowFragmentCallback) :
     RecyclerView.Adapter<ShowAdapter.ShowViewHolder>() {

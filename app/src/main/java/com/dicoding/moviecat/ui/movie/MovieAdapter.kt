@@ -1,4 +1,4 @@
-package com.dicoding.moviecat.ui
+package com.dicoding.moviecat.ui.movie
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.dicoding.moviecat.R
 import com.dicoding.moviecat.data.MovieEntity
 import com.dicoding.moviecat.databinding.RvItemsBinding
+import com.dicoding.moviecat.ui.detail.DetailMovieActivity
 
 class MovieAdapter(private val callback: MovieFragmentCallback) :
     RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
