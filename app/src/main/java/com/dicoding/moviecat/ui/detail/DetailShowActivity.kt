@@ -8,12 +8,12 @@ import com.bumptech.glide.request.RequestOptions
 import com.dicoding.moviecat.R
 import com.dicoding.moviecat.data.ShowEntity
 import com.dicoding.moviecat.databinding.ActivityDetailShowBinding
-import com.dicoding.moviecat.databinding.ContentDetailBinding
+import com.dicoding.moviecat.databinding.ContentDetailShowBinding
 
 class DetailShowActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailShowBinding
-    private lateinit var contentBinding: ContentDetailBinding
+    private lateinit var contentBinding: ContentDetailShowBinding
 
     companion object {
         const val EXTRA_ID = "id"
@@ -23,7 +23,7 @@ class DetailShowActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityDetailShowBinding.inflate(layoutInflater)
-        contentBinding = binding.contentDetail
+        contentBinding = binding.contentDetailShow
         setContentView(binding.root)
 
         binding.toolbar.title = ""
@@ -55,10 +55,10 @@ class DetailShowActivity : AppCompatActivity() {
                     RequestOptions.placeholderOf(R.drawable.ic_loading)
                         .error(R.drawable.ic_error)
                 )
-                .into(imgTitle)
+                .into(imgTitleShow)
 
-            tvYear.text = entity.year
-            tvAdditionalInformation.text = entity.episode
+            tvYearShow.text = entity.year
+            tvAdditionalInformationShow.text = entity.episode
             tvDescription.text = entity.description
             tvCast.text = entity.actress
             tvGenre.text = entity.genres

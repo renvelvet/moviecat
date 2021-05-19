@@ -18,7 +18,7 @@ class MainActivityTest {
     private val dummyShowEntity = DataDummy.generateDummyShows()
 
     @get:Rule
-    var activityRule = ActivityScenarioRule(MainActivity::class.java)
+    var rule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
     fun loadMovieFragment() {
@@ -31,13 +31,27 @@ class MainActivityTest {
     }
 
     @Test
-    fun loadShowFragment() {
-        onView(withText("TV Shows")).perform(click())
-        onView(withId(R.id.rv_shows)).check(matches(isDisplayed()))
-        onView(withId(R.id.rv_shows)).perform(
-            RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-                dummyShowEntity.size
+    fun loadDetailMovie() {
+        onView(withId(R.id.rv_movies)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
             )
         )
+//        onView(withId(R.id.img_title_movie)).check(matches(isDisplayed()))
+//        onView(withId(R.id.tv_additional_information_movie)).check(matches(isDisplayed()))
+//        onView(withId(R.id.tv_additional_information_movie)).check(matches(withText(dummyMovieEntity[0].duration)))
+//        onView(withId(R.id.tv_year_show)).check(matches(isDisplayed()))
+//        onView(withId(R.id.tv_year_show)).check(matches(withText(dummyMovieEntity[0].year)))
     }
+//    @Test
+//    fun loadShowFragment() {
+//        onView(withText("TV Shows")).perform(click())
+//        onView(withId(R.id.rv_shows)).check(matches(isDisplayed()))
+//        onView(withId(R.id.rv_shows)).perform(
+//            RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
+//                dummyShowEntity.size
+//            )
+//        )
+//    }
 }

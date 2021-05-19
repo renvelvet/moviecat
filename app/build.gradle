@@ -7,11 +7,6 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
-    testOptions {
-        unitTests {
-            includeAndroidResources true
-        }
-    }
     defaultConfig {
         applicationId "com.dicoding.moviecat"
         minSdkVersion 21
@@ -54,6 +49,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test:rules:1.3.0'
     // additional libraries
     implementation "com.flaviofaria:kenburnsview:1.0.7"
 }

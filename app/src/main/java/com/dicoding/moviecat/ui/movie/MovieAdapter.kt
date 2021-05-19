@@ -26,8 +26,8 @@ class MovieAdapter(private val callback: MovieFragmentCallback) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(movieEntity: MovieEntity) {
             with(binding) {
-                tvTitle.text = movieEntity.title
-                tvYear.text = movieEntity.year
+                tvItemTitle.text = movieEntity.title
+                tvItemYear.text = movieEntity.year
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailMovieActivity::class.java)
                     intent.putExtra(DetailMovieActivity.EXTRA_ID, movieEntity.movieId)

@@ -26,8 +26,8 @@ class ShowAdapter(private val callback: ShowFragmentCallback) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(showEntity: ShowEntity) {
             with(binding) {
-                tvTitle.text = showEntity.title
-                tvYear.text = showEntity.year
+                tvItemTitle.text = showEntity.title
+                tvItemYear.text = showEntity.year
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailShowActivity::class.java)
                     intent.putExtra(DetailShowActivity.EXTRA_ID, showEntity.showId)
