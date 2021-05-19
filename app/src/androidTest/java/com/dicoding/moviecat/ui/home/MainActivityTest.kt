@@ -38,20 +38,38 @@ class MainActivityTest {
                 click()
             )
         )
-//        onView(withId(R.id.img_title_movie)).check(matches(isDisplayed()))
-//        onView(withId(R.id.tv_additional_information_movie)).check(matches(isDisplayed()))
-//        onView(withId(R.id.tv_additional_information_movie)).check(matches(withText(dummyMovieEntity[0].duration)))
-//        onView(withId(R.id.tv_year_show)).check(matches(isDisplayed()))
-//        onView(withId(R.id.tv_year_show)).check(matches(withText(dummyMovieEntity[0].year)))
+        onView(withId(R.id.img_title_movie)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_additional_information_movie)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_additional_information_movie)).check(matches(withText(dummyMovieEntity[0].duration)))
+        onView(withId(R.id.tv_year_movie)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_year_movie)).check(matches(withText(dummyMovieEntity[0].year)))
     }
-//    @Test
-//    fun loadShowFragment() {
-//        onView(withText("TV Shows")).perform(click())
-//        onView(withId(R.id.rv_shows)).check(matches(isDisplayed()))
-//        onView(withId(R.id.rv_shows)).perform(
-//            RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-//                dummyShowEntity.size
-//            )
-//        )
-//    }
+
+    @Test
+    fun loadShowFragment() {
+        onView(withText("TV Shows")).perform(click())
+        onView(withId(R.id.rv_shows)).check(matches(isDisplayed()))
+        onView(withId(R.id.rv_shows)).perform(
+            RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
+                dummyShowEntity.size
+            )
+        )
+    }
+
+    @Test
+    fun loadDetailShow() {
+        onView(withText("TV Shows")).perform(click())
+        onView(withId(R.id.rv_shows)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
+            )
+        )
+        onView(withId(R.id.img_title_show)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_additional_information_show)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_additional_information_show)).check(matches(withText(dummyShowEntity[0].episode)))
+        onView(withId(R.id.tv_description)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_description)).check(matches(withText(dummyShowEntity[0].description)))
+    }
+
 }

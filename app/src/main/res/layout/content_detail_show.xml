@@ -7,12 +7,13 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="32dp">
 
-    <com.flaviofaria.kenburnsview.KenBurnsView
+    <ImageView
         android:id="@+id/cover_image"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@color/teal_200"
         android:scaleType="fitXY"
+        android:importantForAccessibility="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

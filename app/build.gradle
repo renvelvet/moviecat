@@ -17,6 +17,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    testOptions {
+        animationsDisabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -51,6 +55,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation 'androidx.test:rules:1.3.0'
-    // additional libraries
-    implementation "com.flaviofaria:kenburnsview:1.0.7"
 }
