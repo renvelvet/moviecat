@@ -38,11 +38,18 @@ class MainActivityTest {
                 click()
             )
         )
+        onView(withId(R.id.cover_image)).check(matches(isDisplayed()))
         onView(withId(R.id.img_title_movie)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_additional_information_movie)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_additional_information_movie)).check(matches(withText(dummyMovieEntity[0].duration)))
         onView(withId(R.id.tv_year_movie)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_year_movie)).check(matches(withText(dummyMovieEntity[0].year)))
+        onView(withId(R.id.tv_description)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_description)).check(matches(withText(dummyMovieEntity[0].description)))
+        onView(withId(R.id.tv_cast)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_cast)).check(matches(withText(dummyMovieEntity[0].actress)))
+        onView(withId(R.id.tv_genre)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_genre)).check(matches(withText(dummyMovieEntity[0].genres)))
     }
 
     @Test
@@ -65,11 +72,18 @@ class MainActivityTest {
                 click()
             )
         )
+        onView(withId(R.id.cover_image)).check(matches(isDisplayed()))
         onView(withId(R.id.img_title_show)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_additional_information_show)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_additional_information_show)).check(matches(withText(dummyShowEntity[0].episode)))
+        onView(withId(R.id.tv_year_show)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_year_show)).check(matches(withText(dummyShowEntity[0].year)))
         onView(withId(R.id.tv_description)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_description)).check(matches(withText(dummyShowEntity[0].description)))
+        onView(withId(R.id.tv_cast)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_cast)).check(matches(withText(dummyShowEntity[0].actress)))
+        onView(withId(R.id.tv_genre)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_genre)).check(matches(withText(dummyShowEntity[0].genres)))
     }
 
 }
